@@ -1,0 +1,67 @@
+body {
+	margin: 2em;
+}
+
+h1 {
+	font-family: 'Jua', sans-serif;
+	text-align: center;
+	color: black;
+}
+
+hr {
+	height: 1px;
+	background-color: black;
+	margin-bottom: 2em;
+}
+
+.upperCase {
+	text-transform: uppercase;
+}
+
+.top {
+	margin-top: 1em;
+}
+
+.bottom {
+	margin-top: 0.3em;
+}
+
+p {
+	margin: 0;
+}
+
+a, a:hover, a:focus, a:active {
+	text-decoration: none;
+	color:inherit;
+}
+
+.redLine {
+	border-top: solid red;
+	border-bottom: solid red;
+	display: inline;
+	padding: 0.15em;
+}
+
+/* to remove space between buttons font-size:0 for parrent */
+.btnspace {
+	font-size: 0;
+}
+
+.btn {
+	width: 8.5em;
+	height: 2em;
+	font-size: 12px;
+	display: inline-block;
+}
+
+.greenbtn {
+	background-color: lightgreen;
+}
+
+#cancel {
+	background-color: red;
+}
+
+#signup {
+	background-color: lightblue;
+}
