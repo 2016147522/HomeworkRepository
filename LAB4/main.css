@@ -105,6 +105,13 @@ p {
 	justify-content: space-evenly;
 }
 
+.introText, nav.greetings {
+	margin-top: 0.5em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
 #cancel {
 	background-color: red;
 }
@@ -133,16 +140,9 @@ img {
 /* defining style depends on screem size */
 @media screen and (min-width:801px) {
 	nav.greetings {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
 		justify-content: flex-start;
 	}
 	.introText {
-		margin-top: 0.5em;
-		display: flex;
-		flex-direction: row;
-		flex: wrap;
 		justify-content: center;
 	}
 	@keyframes moving {
@@ -158,10 +158,11 @@ img {
 	h2 {
 		text-align: center;
 	}
+	.imgPics {
+		justify-content: space-between;
+	}
 	nav.greetings, .introText {
-		display: flex;
 		flex-direction: column;
-		flex-wrap: nowrap;
 		align-items: center;
 	}
 }
@@ -174,9 +175,7 @@ img {
 		text-align: center;
 	}
 	nav.greetings, .itemsPics, .introText {
-		display: flex;
 		flex-direction: column;
-		flex-wrap: wrap;
 		align-items: center;
 	}
 }
