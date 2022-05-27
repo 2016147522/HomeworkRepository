@@ -1,0 +1,181 @@
+.main {
+	width: 1020px;
+	margin: auto;
+}
+
+h1 {
+	margin: auto;
+	padding: auto;
+	display: inline-block;
+	font-family: 'Jua', sans-serif;
+	color: black;
+}
+
+hr {
+	height: 1px;
+	background-color: black;
+	margin-bottom: 2em;
+}
+
+.upperCase {
+	text-transform: uppercase;
+}
+
+.top {
+	margin-top: 1em;
+}
+
+.bottom {
+	margin-top: 0.3em;
+}
+
+a, a:hover, a:focus, a:active {
+	text-decoration: none;
+	color:inherit;
+}
+
+a {
+	padding: 0.15em;
+}
+
+.redLine {
+	border-top: solid red;
+	border-bottom: solid red;
+	border-width: auto;
+	display: inline;
+	padding: 0.15em;
+}
+
+/* to remove space between buttons font-size:0 for parrent */
+.btnspace {
+	font-size: 0;
+}
+
+.btn {
+	width: 8.5em;
+	height: 2em;
+	font-size: 12px;
+	display: inline-block;
+}
+
+.greenbtn {
+	background-color: lightgreen;
+}
+
+.greetings {
+	margin-top: 0.5em;
+	padding: 0.5em;
+}
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	flex: wrap;
+	justify-content: flex-start;
+}
+
+h2 {
+	margin: 0.5em 0.5em 0em 0.5em;
+}
+
+p {
+	margin: 0.5em;
+}
+
+.hl {
+	border-bottom: 1.5px solid gray;
+}
+
+.vl {
+	border-left: 2px solid gray;
+	height: auto;
+}
+
+.itemsBox {
+	margin-top: 0.5em;
+	padding: 0.5em;
+	display: flex;
+	flex-direction: column;
+}
+
+.itemsPics {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.introText, nav.greetings {
+	margin-top: 0.5em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#cancel {
+	background-color: red;
+}
+
+#signup {
+	background-color: lightblue;
+}
+
+#hello {
+	position: relative;
+	animation-name: moving;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+}
+
+img {
+	width: 150px;
+	height: 150px;
+	margin: 0.5em auto;
+	padding: 10px 75px 150px 10px;
+	border: solid pink;
+}
+
+/* defining style depends on screem size */
+@media screen and (min-width:801px) {
+	nav.greetings {
+		justify-content: flex-start;
+	}
+	.introText {
+		justify-content: center;
+	}
+	@keyframes moving {
+		from {transform: translateX(0px);}
+		to {transform: translateX(660px);}
+	}	
+}
+
+@media screen and (min-width:481px) and (max-width:800px) {
+	.main {
+		width: auto;
+	}
+	h2 {
+		text-align: center;
+	}
+	.imgPics {
+		justify-content: space-between;
+	}
+	nav.greetings, .introText {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width:480px) {
+	.main {
+		width: auto;
+	}
+	h2 {
+		text-align: center;
+	}
+	nav.greetings, .itemsPics, .introText {
+		flex-direction: column;
+		align-items: center;
+	}
+}
