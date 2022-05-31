@@ -12,40 +12,42 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <h1>Welcome to <span class="upperCase">internet-programming shop</span></h1>
-        <nav>
-            <a href = "login.html">로그인</a>
-            <a href="#" class="redLine">회원가입</a>
-        </nav>
-        <hr class="top">
-        <form action="post" action="#">
-            <p>개인정보 (필수)</p>
-            <p><label>이름:
-                <input type="text" name="userInfo" placeholder="이름을 입력하세요" size = "20" required>
-            </label></p>
-            <p><label>생일:
-                <input type="date" name="birthDate" required>
-            </label></p>
-            <p><label>학년:
-                <input type="number" name="year" min="1" max="7" required>
-            </label></p>
-            <p><label>전화번호:
-                <input type="tel" name="phoneNum" placeholder="(###)###-####" pattern="\(\d{3}\)\d{3}-\d{4}" required>
-            </label></p>
-            <p><label>유저아이디:
-                <input type="text" name="userID" placeholder="아이디를 입력하세요" pattern="[A-Za-z]" required>
-            </label></p>
-            <p><label>비밀번호:
-                <input type="password" name="password" placeholder="비밀번호를 입력하세요" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-            </label></p>
-            <p><label>비밀번호 확인:
-                <input type="password" name="password" placeholder="비밀번호 확인" minlength="8" required>
-            </label></p>
-            <p class="btnspace">
-                <input type="submit" value="Signup" class="btn greenbtn">
-                <input type="reset" value="Cancel" class="btn" id="cancel">
-            </p>
-        </form>
-        <hr class="bottom">
+        <div class="main">
+            <h1>이다마켓에 오신것을 환영합니다</span></h1>
+            <nav>
+                <a href="index.html">메인페이지</a>
+                <a href = "login.html">로그인</a>
+                <a href="#" class="redLine">회원가입</a>
+            </nav>
+            <hr class="top">
+            <form action="post" action="#">
+                <p>개인정보 (필수)</p>
+                <p><label>이름:
+                    <input type="text" name="userInfo" placeholder="이름을 입력하세요" size = "20" required>
+                </label></p>
+                <p><label>생일:
+                    <input type="date" name="birthDate" required>
+                </label></p>
+                <p><label>학년:
+                    <input type="number" name="year" min="1" max="7" required>
+                </label></p>
+                <p><label>전화번호:
+                    <input type="tel" name="phoneNum" placeholder="(###)###-####" pattern="\(\d{3}\)\d{3}-\d{4}" required>
+                </label></p>
+                <p><label>유저아이디:
+                    <input type="text" name="userID" placeholder="아이디를 입력하세요" pattern="[A-Za-z]" required>
+                </label></p>
+                <p><label>비밀번호:
+                    <input type="password" name="password" placeholder="비밀번호를 입력하세요" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                </label></p>
+                <p><label>비밀번호 확인:
+                    <input type="password" name="password" placeholder="비밀번호 확인" minlength="8" required>
+                </label></p>
+                <p class="btnspace">
+                    <input type="submit" value="Signup" class="btn greenbtn">
+                    <input type="reset" value="Cancel" class="btn" id="cancel">
+                </p>
+            </form>
+        </div>
     </body>
 </html>

@@ -1,0 +1,38 @@
+[
+	{
+	"name": "CandleA", 
+	"price": 15.0, 
+	"image": "candle1.jpg",
+	"category": "Unscented"
+	},
+	{
+	"name": "CandleB", 
+	"price": 12.0, 
+	"image": "candle3.jpg",
+	"category": "Unscented"
+	},
+	{
+	"name": "CandleC", 
+	"price": 11.0, 
+	"image": "candle3.jpg",
+	"category": "Scented"
+	},
+	{
+	"name": "CandleD", 
+	"price": 8.0, 
+	"image": "candle4.png",
+	"category": "Unscented"
+	},
+	{
+	"name": "CandleF", 
+	"price": 17.0, 
+	"image": "candle5.jpg",
+	"category": "Scented"
+	},
+	{
+	"name": "CandleE", 
+	"price": 20.0, 
+	"image": "candle6.jpg",
+	"category": "Scented"
+	}
+]

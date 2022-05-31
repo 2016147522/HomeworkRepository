@@ -1,21 +1,32 @@
-.main {
+body {
 	width: 1020px;
 	margin: auto;
+	background-color: #f2f2f2;
+	border: solid pink 0.3em;
+	font-family: 'Jua', sans-serif;
+	color: #4d4d4d;
 }
 
 h1 {
 	margin: auto;
 	padding: auto;
 	display: inline-block;
-	font-family: 'Jua', sans-serif;
-	color: black;
 }
 
-hr {
-	height: 1px;
-	background-color: black;
-	margin-bottom: 2em;
+form {
+	border-right: solid pink;
 }
+
+form > div, a {
+	padding: 0.15em;
+}
+
+a, a:hover, a:focus, a:active {
+	color: #737373;
+	text-decoration: none;
+	color:inherit;
+}
+
 
 .upperCase {
 	text-transform: uppercase;
@@ -29,18 +40,9 @@ hr {
 	margin-top: 0.3em;
 }
 
-a, a:hover, a:focus, a:active {
-	text-decoration: none;
-	color:inherit;
-}
-
-a {
-	padding: 0.15em;
-}
-
 .redLine {
-	border-top: solid red;
-	border-bottom: solid red;
+	border-top: solid pink;
+	border-bottom: solid pink;
 	border-width: auto;
 	display: inline;
 	padding: 0.15em;
@@ -56,22 +58,19 @@ a {
 	height: 2em;
 	font-size: 12px;
 	display: inline-block;
+	background-color: #d9b3ff;
 }
 
-.greenbtn {
-	background-color: lightgreen;
+.show {
+	margin: 0.5em;
+	padding: 0.15em;
+	background-color: #f3e6ff;
 }
 
 .greetings {
+	border-bottom: solid pink;
 	margin-top: 0.5em;
 	padding: 0.5em;
-}
-
-.intro {
-	display: flex;
-	flex-direction: column;
-	flex: wrap;
-	justify-content: flex-start;
 }
 
 h2 {
@@ -82,59 +81,65 @@ p {
 	margin: 0.5em;
 }
 
-.hl {
-	border-bottom: 1.5px solid gray;
-}
-
-.vl {
-	border-left: 2px solid gray;
-	height: auto;
-}
-
 .itemsBox {
 	margin-top: 0.5em;
 	padding: 0.5em;
 	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.search {
+	background-color:#ffe6e6;
+	margin: 0.5em;
+	padding: 0.5em;
+	border: solid pink;
+	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: flex-start;
 }
 
-.itemsPics {
+.items {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
 
-.introText, nav.greetings {
+.item {
+	margin: 0.5em;
+	background-color: #ffe6e6;
+}
+
+nav.greetings {
+	border-bottom: ;
 	margin-top: 0.5em;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
 
+.desc {
+	visibility: hidden;
+}
+
+#descr {
+	visibility: hidden;
+}
+
+#price {
+	visibility: hidden;
+}
+
 #cancel {
-	background-color: red;
-}
-
-#signup {
-	background-color: lightblue;
-}
-
-#hello {
-	position: relative;
-	animation-name: moving;
-	animation-duration: 2s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-
+	background-color: #ffb3b3;
 }
 
 img {
 	width: 150px;
 	height: 150px;
-	margin: 0.5em auto;
-	padding: 10px 75px 150px 10px;
-	border: solid pink;
+	margin: auto;
+	padding: 75px 75px;
 }
 
 /* defining style depends on screem size */

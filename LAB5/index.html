@@ -12,37 +12,109 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
+        <header>
+            <h1 id="hello">안녕하세요 이다마켓입니다.</h1>
+        </header>
+        <nav class="greetings">
+            <a href="index.html" class="redLine">메인페이지</a>
+            <a href = "login.html">로그인</a>
+            <a href="signup.html">회원가입</a>
+        </nav>
         <div class="main">
-            <div class="greetings">
-                <h1 id="hello">안녕하세요 이다마켓입니다.</h1>
-            </div> 
-            <nav class="greetings">
-                <a href="index.html" class="redLine">메인페이지</a>
-                <a href = "login.html">로그인</a>
-                <a href="signup.html">회원가입</a>
-            </nav>
-            <div class="hl"></div>
             <div class="itemsBox">
-                <div>
-                    <h2>이다마켓 인기템</h2>
-                </div>
-                <div class="hl"></div>
-                <div class="itemsPics">
-                    <img src="candle.jpg" id="img1" alt="Item Image 1"> 
-                    <img src="candle2.jpg" id="img2" alt="Item Image 2">
-                    <img src="candle3.jpg" id="img3" alt="Item Image 3">
-                    <img src="candle4.png" id="img4" alt="Item Image 4">
-                </div>
-                <div class="intro">
-                    <h2>이다마켓 소개</h2>
-                    <div class="hl"></div>
-                    <div class="introText">
-                        <p>여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다</p>
-                        <div class="vl"></div>
-                        <p>여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다여기는이다마켓입니다</p>
+                <form>
+                    <div>
+                        <label for="category">Choose a category:</label>
+                        <select id="category">
+                            <option selected>All types</option>
+                            <option>Scented Candle</option>
+                            <option>Unscented Candle</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="keyword">Enter search item:
+                            <input type="search" name="search" placeholder="ex: Shell" id="keyword">
+                        </label>
+                    </div>
+                    <div>
+                        <p class="btnspace">
+                            <input type="submit" value="Filter Results" class="btn" id="filter">
+                        </p>
+                    </div>
+                </form>
+                <!-- showing items -->
+                <div class="items" id="candle">
+                    <div class="item">
+                        <button class="show" onclick="showDesc()">Show me more</button>
+                        <h3 id="descr">Candle A</h3>
+                        <img src="candle.jpg" class="unscented" id="img1" alt="Item Image 1">
+                        <p id="price">15.0 $</p>
+                    </div>
+                    <div class="item">
+                        <button class="show" onclick="showDesc()">Show me more</button>
+                        <h3 class="desc">Candle B</h3>
+                        <img src="candle2.jpg" class="unscented" id="img2" alt="Item Image 2">
+                        <p class="desc">12.0 $</p>
+                    </div>
+                    <div class="item">
+                        <button class="show" onclick="showDesc()">Show me more</button>
+                        <h3 class="desc">Candle C</h3>
+                        <img src="candle3.jpg" class="scented" id="img3" alt="Item Image 3">
+                        <p class="desc">11.0 $</p>
+                    </div>
+                    <div class="item">
+                        <button class="show" onclick="showDesc()">Show me more</button>
+                        <h3 class="desc">Candle D</h3>
+                        <img src="candle4.png" class="unscented" id="img4" alt="Item Image 4">
+                        <p class="desc">8.0 $</p>
+                    </div>
+                    <div class="item">
+                        <button class="show" onclick="showDesc()">Show me more</button>
+                        <h3 class="desc">Candle E</h3>
+                        <img src="candle5.jpg" class="scented" id="img5" alt="Item Image 5">
+                        <p class="desc">17.0 $</p>
+                    </div>
+                    <div class="item">
+                        <button class="show" onclick="showDesc()">Show me more</button>
+                        <h3 class="desc">Candle F</h3>
+                        <img src="candle6.jpg" class="scented" id="img6" alt="Item Image 6">
+                        <p class="desc">20.0 $</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            
+            fetch("product.json")
+            .then(function(response) {
+                return response.json();})
+            .then(function(json) {
+                let product = json;
+                initialize(product);})
+            .catch(function(err) {
+                console.log("Fetch problem:" + err.message);});
+            
+            function initialize(products) {
+                const items = document.querySelector('.items');
+                function showProduct(product) {
+                    const item = document.createElement('div');
+                    item.className = "item";
+                    const heading = document.createElement('h3');
+                    const price = document.createElement('p');
+                    
+                    items.appendChild(item);
+                    item.appendChild(heading);
+                    item.appendChild(price);
+                }
+            }
+
+            function showDesc() {
+                const el = document.getElementById("descr");
+                const elp = document.getElementById("price");
+                el.style.visibility = "visible";
+                elp.style.visibility = "visible";
+            }
+        </script>
     </body>
 </html>
